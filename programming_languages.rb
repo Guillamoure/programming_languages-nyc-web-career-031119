@@ -9,7 +9,7 @@ def reformat_languages(languages)
       final_hash[language] = {}
       final_hash[language] = {type_hash.keys[0] => type_hash.values[0]}
       binding.pry
-      if final_hash[language][:style].length != nil
+      if final_hash[language][:style] != nil
         final_hash[language][:style] << style
       else
         final_hash[language][:style] =[]
