@@ -8,9 +8,10 @@ def reformat_languages(languages)
     group.each do |language, type_hash|
       final_hash[language] = {}
       final_hash[language] = {type_hash.keys[0] => type_hash.values[0]}
-      final_hash[language][:style] =[]
-      final_hash[language][:style] << style
-      
+      if final_hash[language][:style]
+        final_hash[language][:style] =[]
+        final_hash[language][:style] << style
+      end
     end
   end
   return final_hash
